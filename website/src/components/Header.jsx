@@ -55,7 +55,11 @@ export default function Header() {
         to="/"
         style={{ display: 'flex', alignItems: 'center', gap: '14px', marginRight: 'auto' }}
       >
-        <img src="/logo.png" alt="ASM-IITD chapter logo" style={{ width: 46, height: 46, display: 'block' }} />
+        <img
+          src={`${import.meta.env.BASE_URL}logo.png`}
+          alt="ASM-IITD chapter logo"
+          style={{ width: 46, height: 46, display: 'block' }}
+        />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <span
             style={{

@@ -15,7 +15,7 @@ export default function Footer() {
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
           <img
-            src="/logo.png"
+            src={`${import.meta.env.BASE_URL}logo.png`}
             alt=""
             style={{ width: 38, height: 38, display: 'block', opacity: 0.9 }}
           />
@@ -35,7 +35,7 @@ export default function Footer() {
           <a href="#" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href="/constitution.pdf" target="_blank" rel="noopener noreferrer">
+          <a href={`${import.meta.env.BASE_URL}constitution.pdf`} target="_blank" rel="noopener noreferrer">
             Constitution (PDF)
           </a>
         </div>

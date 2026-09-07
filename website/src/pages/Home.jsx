@@ -92,7 +92,7 @@ export default function Home() {
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <img
-            src="/logo.png"
+            src={`${import.meta.env.BASE_URL}logo.png`}
             alt="ASM-IITD chapter logo"
             style={{ width: '100%', maxWidth: 380, display: 'block' }}
           />
