@@ -1,0 +1,70 @@
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #faf5ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  color: #241614;
+}
+
+a {
+  color: #7a0f14;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #a8262b;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.social-link {
+  color: #7a0f14;
+  border-color: #dfcfb4;
+}
+.social-link:hover {
+  background: #7a0f14;
+  color: #faf5ea;
+  border-color: #7a0f14;
+}
+
+.btn-primary {
+  background: #7a0f14;
+  color: #faf5ea;
+}
+.btn-primary:hover {
+  background: #5e0b0f;
+}
+
+.btn-outline {
+  border-color: #c9b79a;
+  color: #7a0f14;
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: #7a0f14;
+  background: #f3e8d4;
+}
+
+.cta-pill {
+  border-color: #e7c9a8;
+  color: #f7efe0;
+}
+.cta-pill:hover {
+  background: #f7efe0;
+  color: #7a0f14;
+}
