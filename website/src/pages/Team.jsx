@@ -11,26 +11,26 @@ const verticals = [
   {
     name: 'Administration',
     description: 'Records, minutes, membership roster and meeting logistics.',
-    coordinators: ['Add name', 'Add name'],
-    executives: ['Add name', 'Add name', 'Add name', 'Add name'],
+    coordinators: ['Aryan Jain', 'Shivanshu Agrawal'],
+    executives: ['', '','',''],
   },
   {
     name: 'Outreach',
     description: 'Social media, workshops, guest sessions and external collaborations.',
-    coordinators: ['Add name', 'Add name'],
-    executives: ['Add name', 'Add name', 'Add name', 'Add name'],
+    coordinators: ['Harihar Muralidharan', 'Bhumika Varin'],
+    executives: ['', '','',''],
   },
   {
     name: 'Sponsorship & Fundraising',
     description: 'Funds, accounts, fundraisers and chapter purchases.',
-    coordinators: ['Add name', 'Add name'],
-    executives: ['Add name', 'Add name', 'Add name', 'Add name'],
+    coordinators: ['', ''],
+    executives: ['', '','',''],
   },
   {
     name: 'Design',
     description: 'Posters, pamphlets, invitations and correct logo usage.',
-    coordinators: ['Add name', 'Add name'],
-    executives: ['Add name', 'Add name', 'Add name', 'Add name'],
+    coordinators: ['Yashsvi Bhadoriya', ''],
+    executives: ['', '','',''],
   },
 ]
 
@@ -92,13 +92,13 @@ export default function Team() {
           {facultyAdvisor.role}
         </p>
         <h2 style={{ margin: '0 0 12px', fontFamily: 'Spectral, Georgia, serif', fontSize: 27, fontWeight: 600 }}>
-          Add name
+          Dr. Shilpi Sharma
         </h2>
         <p style={{ margin: '0 0 14px', fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>
-          Department · add a line on their role with the chapter.
+          DBEB · Faculty mentorship and strategic guidance to the chapter.
         </p>
-        <a href="mailto:" style={{ fontSize: 14, letterSpacing: '0.02em' }}>
-          add email
+        <a href="mailto:shilpi@dbeb.iitd.ac.in" style={{ fontSize: 14, letterSpacing: '0.02em' }}>
+          Contact
         </a>
       </Reveal>
 
