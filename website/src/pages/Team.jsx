@@ -81,8 +81,8 @@ export default function Team() {
       </Reveal>
       <Reveal delay={0.12}>
         <p style={{ margin: '0 0 56px', maxWidth: '62ch', fontSize: 17, lineHeight: 1.62, color: '#4A3A33' }}>
-          The chapter is run by one Overall Coordinator and four verticals, each with its own
-          Coordinators and Executives. Officers serve a one‑year term beginning with Semester I.
+          The chapter is run by an Overall Coordinator, a Co-Overall Coordinator and four verticals, each with its own Coordinators and Executives.
+          Officers serve a one‑year term beginning with Semester I.
         </p>
       </Reveal>
 
