@@ -3,8 +3,22 @@ import Reveal from '../components/Reveal.jsx'
 const facultyAdvisor = { id: 'faculty-advisor', role: 'Faculty Advisor' }
 
 const leadership = [
-  { id: 'officer-overall', role: 'Overall Coordinator' },
-  { id: 'officer-co-overall', role: 'Co‑Overall Coordinator' },
+  {
+    id: 'officer-overall',
+    role: 'Overall Coordinator',
+    name: 'Naman Kohli',
+    programme: 'B. Tech',
+    dept: 'DBEB',
+    email: 'bb1231015@iitd.ac.in',
+  },
+  {
+    id: 'officer-co-overall',
+    role: 'Co‑Overall Coordinator',
+    name: 'Khushi Chouhan',
+    programme: 'PhD',
+    dept: 'DBEB',
+    email: 'bez238390@dbeb.iitd.ac.in',
+  },
 ]
 
 const verticals = [
@@ -133,13 +147,13 @@ export default function Team() {
               {officer.role}
             </p>
             <h2 style={{ margin: '0 0 12px', fontFamily: 'Spectral, Georgia, serif', fontSize: 27, fontWeight: 600 }}>
-              Add name
+              {officer.name}
             </h2>
             <p style={{ margin: '0 0 14px', fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>
-              Programme and department · add a line on their research interests.
+              {officer.programme} · {officer.dept}
             </p>
-            <a href="mailto:" style={{ fontSize: 14, letterSpacing: '0.02em' }}>
-              add email
+            <a href={`mailto:${officer.email}`} style={{ fontSize: 14, letterSpacing: '0.02em' }}>
+              Contact
             </a>
           </Reveal>
         ))}
