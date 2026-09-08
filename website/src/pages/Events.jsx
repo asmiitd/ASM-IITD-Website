@@ -23,9 +23,9 @@ const events = [
     title: 'World Microbiome Day Hackathon',
     description:
       'A day‑long hackathon marking World Microbiome Day, with student teams building solutions around the human and environmental microbiome. Replace this paragraph with the theme, problem statements and winning teams.',
-    tags: ['Teams: add count', 'Venue: add venue'],
+    tags: ['Teams: 30', 'Mode: Online'],
     placeholder: 'Drop a photo from the hackathon',
-    image: 'Hacteria.png',
+    image: 'Hacteriaa.png',
   },
   {
     id: 'ev-tour-of-stalls',
@@ -33,7 +33,7 @@ const events = [
     title: 'Tour of Stalls',
     description:
       'A guided walk through the exhibit stalls, introducing visitors to the chapter and to microbiology work happening across the three departments. Replace this paragraph with what was shown and who attended.',
-    tags: ['Visitors: add count', 'Venue: add venue'],
+    tags: ['Visitors: 100+', 'Venue: LH 325 Foyer'],
     placeholder: 'Drop a photo from the tour',
     image: 'tos.png',
   },
@@ -43,7 +43,7 @@ const events = [
     title: 'Open House 2026',
     description:
       'The chapter’s first public appearance at the IIT Delhi Open House, presenting microbiology demonstrations and the chapter’s plans to visiting students and families. Replace this paragraph with the demonstrations you ran and the footfall.',
-    tags: ['Visitors: add count', 'Venue: add venue'],
+    tags: ['Visitors: 50+', 'Venue: Central Atrium'],
     placeholder: 'Drop a photo from Open House',
     image: 'openhouse.png',
   },
