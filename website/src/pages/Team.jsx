@@ -76,7 +76,7 @@ export default function Team() {
             letterSpacing: '-0.015em',
           }}
         >
-          Active officers
+          Chapter Organization
         </h1>
       </Reveal>
       <Reveal delay={0.12}>
