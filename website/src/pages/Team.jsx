@@ -1,6 +1,8 @@
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
 import Reveal from '../components/Reveal.jsx'
 
+const facultyAdvisor = { id: 'faculty-advisor', role: 'Faculty Advisor' }
+
 const leadership = [
   { id: 'officer-overall', role: 'Overall Coordinator' },
   { id: 'officer-co-overall', role: 'Co‑Overall Coordinator' },
@@ -68,6 +70,46 @@ export default function Team() {
           The chapter is run by one Overall Coordinator and four verticals, each with its own
           Coordinators and Executives. Officers serve a one‑year term beginning with Semester I.
         </p>
+      </Reveal>
+
+      <Reveal
+        as="section"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '140px minmax(0, 1fr)',
+          gap: 26,
+          alignItems: 'center',
+          padding: 28,
+          marginBottom: 24,
+          background: '#F5EBD9',
+          border: '1px solid #E4D8C2',
+        }}
+      >
+        <div style={{ position: 'relative', width: 140, height: 140 }}>
+          <PlaceholderImage shape="circle" caption="Photo" />
+        </div>
+        <div>
+          <p
+            style={{
+              margin: '0 0 10px',
+              fontSize: '11.5px',
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: '#A8262B',
+            }}
+          >
+            {facultyAdvisor.role}
+          </p>
+          <h2 style={{ margin: '0 0 12px', fontFamily: 'Spectral, Georgia, serif', fontSize: 27, fontWeight: 600 }}>
+            Add name
+          </h2>
+          <p style={{ margin: '0 0 14px', fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>
+            Department · add a line on their role with the chapter.
+          </p>
+          <a href="mailto:" style={{ fontSize: 14, letterSpacing: '0.02em' }}>
+            add email
+          </a>
+        </div>
       </Reveal>
 
       <div
@@ -193,7 +235,7 @@ export default function Team() {
 
       <Reveal>
         <p style={{ margin: '40px 0 0', fontSize: '14.5px', lineHeight: 1.6, color: '#6B584E', maxWidth: '60ch' }}>
-          Faculty advisor and outstanding board members are listed once appointed for the term.
+          Outstanding board members are listed once appointed for the term.
         </p>
       </Reveal>
     </main>

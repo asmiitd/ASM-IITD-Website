@@ -34,9 +34,30 @@ these markers and fill them in:
   `src/pages/Events.jsx`.
 - **Talk series details & upcoming talks** — `src/pages/Talks.jsx`.
 - **Photos** — every dashed placeholder box (`PlaceholderImage`) is a spot
-  for a real photo. Replace the `PlaceholderImage` usage with an `<img>`
-  once you have the photo, keeping the same wrapper `div` (it controls the
-  aspect ratio / circle shape).
+  for a real photo.
+
+## Adding event photos
+
+Drop the image file straight into **`public/events/`** in this repo, using
+the exact filename each event already expects (set in the `image` field of
+the `events` array in `src/pages/Events.jsx`):
+
+- `public/events/openhouse.png` — Open House 2026
+- `public/events/tos.png` — Tour of Stalls
+- `public/events/Hacteria.png` — World Microbiome Day Hackathon
+
+The easiest way for anyone on the team, no git required: on GitHub, open
+this folder in the browser (`website/public/events/` in the repo), click
+**Add file → Upload files**, drag the image in, and make sure it's named
+exactly as above before committing to `main`. The site rebuilds and
+redeploys automatically within a couple of minutes (GitHub Actions). If a
+file isn't there yet, that event just shows the dashed placeholder instead
+— nothing breaks.
+
+For a **new** event or a team/officer photo, add the file under
+`public/events/` (or `public/` for other one-off images) with a new
+filename, then reference that filename from the corresponding entry in
+`src/pages/Events.jsx` (or `src/pages/Team.jsx`) — `image: 'your-file.png'`.
 
 `public/logo.png` and `public/constitution.pdf` are copied from the design
 bundle in `../project/`.

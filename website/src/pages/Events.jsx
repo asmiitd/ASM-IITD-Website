@@ -1,6 +1,20 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
 import Reveal from '../components/Reveal.jsx'
+
+function EventPhoto({ image, caption, alt }) {
+  const [failed, setFailed] = useState(false)
+  if (!image || failed) return <PlaceholderImage caption={caption} />
+  return (
+    <img
+      src={`${import.meta.env.BASE_URL}events/${image}`}
+      alt={alt}
+      onError={() => setFailed(true)}
+      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+    />
+  )
+}
 
 const events = [
   {
@@ -11,6 +25,7 @@ const events = [
       'A day‑long hackathon marking World Microbiome Day, with student teams building solutions around the human and environmental microbiome. Replace this paragraph with the theme, problem statements and winning teams.',
     tags: ['Teams: add count', 'Venue: add venue'],
     placeholder: 'Drop a photo from the hackathon',
+    image: 'Hacteria.png',
   },
   {
     id: 'ev-tour-of-stalls',
@@ -20,6 +35,7 @@ const events = [
       'A guided walk through the exhibit stalls, introducing visitors to the chapter and to microbiology work happening across the three departments. Replace this paragraph with what was shown and who attended.',
     tags: ['Visitors: add count', 'Venue: add venue'],
     placeholder: 'Drop a photo from the tour',
+    image: 'tos.png',
   },
   {
     id: 'ev-open-house-2026',
@@ -29,6 +45,7 @@ const events = [
       'The chapter’s first public appearance at the IIT Delhi Open House, presenting microbiology demonstrations and the chapter’s plans to visiting students and families. Replace this paragraph with the demonstrations you ran and the footfall.',
     tags: ['Visitors: add count', 'Venue: add venue'],
     placeholder: 'Drop a photo from Open House',
+    image: 'openhouse.png',
   },
 ]
 
@@ -84,7 +101,7 @@ export default function Events() {
           }}
         >
           <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3', background: '#F5EBD9' }}>
-            <PlaceholderImage caption={event.placeholder} />
+            <EventPhoto image={event.image} caption={event.placeholder} alt={event.title} />
           </div>
           <div>
             <p
