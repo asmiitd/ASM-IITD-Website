@@ -35,7 +35,7 @@ const events = [
       'A week-long student hackathon celebrating World Microbiome Day, focused on developing solutions for gut microbiome and AMR challenges.',
     tags: ['Teams: 30', 'Mode: Online'],
     placeholder: 'Drop a photo from the hackathon',
-    image: 'Hacteriaa.png',
+    image: 'wmd.png',
   },
   {
     id: 'ev-open-house-2026',
