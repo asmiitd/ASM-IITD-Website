@@ -18,18 +18,8 @@ function EventPhoto({ image, caption, alt }) {
 
 const events = [
   {
-    id: 'ev-microbiome-day',
-    eyebrow: 'Hackathon · add date',
-    title: 'World Microbiome Day Hackathon',
-    description:
-      'A week-long student hackathon celebrating World Microbiome Day, focused on developing solutions for gut microbiome and AMR challenges.',
-    tags: ['Teams: 30', 'Mode: Online'],
-    placeholder: 'Drop a photo from the hackathon',
-    image: 'Hacteriaa.png',
-  },
-  {
     id: 'ev-tour-of-stalls',
-    eyebrow: 'Campus activity · add date',
+    eyebrow: 'Campus activity · 25/07/26',
     title: 'Tour of Stalls',
     description:
       'A guided walk through the exhibit stalls, introducing visitors to the chapter and to microbiology work happening across the institute. ',
@@ -38,8 +28,18 @@ const events = [
     image: 'tos.png',
   },
   {
+    id: 'ev-microbiome-day',
+    eyebrow: 'Hackathon · 27/06/26',
+    title: 'World Microbiome Day Hackathon',
+    description:
+      'A week-long student hackathon celebrating World Microbiome Day, focused on developing solutions for gut microbiome and AMR challenges.',
+    tags: ['Teams: 30', 'Mode: Online'],
+    placeholder: 'Drop a photo from the hackathon',
+    image: 'Hacteriaa.png',
+  },
+  {
     id: 'ev-open-house-2026',
-    eyebrow: 'Outreach · 2026',
+    eyebrow: 'Outreach · 06/06/26',
     title: 'Open House 2026',
     description:
       'The chapter’s first public appearance at the IIT Delhi Open House, presenting microbiology demonstrations and the chapter’s plans to visiting students and families. ',
