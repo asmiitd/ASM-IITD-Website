@@ -345,7 +345,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.1}>
             <a
-              href="mailto:"
+              href="mailto:asm_iitd@admin.iitd.ac.in"
               className="cta-pill"
               style={{
                 padding: '15px 28px',
