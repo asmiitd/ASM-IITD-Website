@@ -103,7 +103,7 @@ export default function Header() {
         }}
       >
         <a
-          href="#"
+          href="https://www.instagram.com/asm.iitd"
           target="_blank"
           rel="noopener noreferrer"
           title="Instagram"
@@ -113,7 +113,7 @@ export default function Header() {
           IG
         </a>
         <a
-          href="#"
+          href="https://www.linkedin.com/company/asm-iitd-student-chapter/about/"
           target="_blank"
           rel="noopener noreferrer"
           title="LinkedIn"
