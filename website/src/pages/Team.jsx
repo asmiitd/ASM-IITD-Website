@@ -1,4 +1,3 @@
-import PlaceholderImage from '../components/PlaceholderImage.jsx'
 import Reveal from '../components/Reveal.jsx'
 
 const facultyAdvisor = { id: 'faculty-advisor', role: 'Faculty Advisor' }
@@ -75,41 +74,32 @@ export default function Team() {
       <Reveal
         as="section"
         style={{
-          display: 'grid',
-          gridTemplateColumns: '140px minmax(0, 1fr)',
-          gap: 26,
-          alignItems: 'center',
           padding: 28,
           marginBottom: 24,
           background: '#F5EBD9',
           border: '1px solid #E4D8C2',
         }}
       >
-        <div style={{ position: 'relative', width: 140, height: 140 }}>
-          <PlaceholderImage shape="circle" caption="Photo" />
-        </div>
-        <div>
-          <p
-            style={{
-              margin: '0 0 10px',
-              fontSize: '11.5px',
-              letterSpacing: '0.16em',
-              textTransform: 'uppercase',
-              color: '#A8262B',
-            }}
-          >
-            {facultyAdvisor.role}
-          </p>
-          <h2 style={{ margin: '0 0 12px', fontFamily: 'Spectral, Georgia, serif', fontSize: 27, fontWeight: 600 }}>
-            Add name
-          </h2>
-          <p style={{ margin: '0 0 14px', fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>
-            Department · add a line on their role with the chapter.
-          </p>
-          <a href="mailto:" style={{ fontSize: 14, letterSpacing: '0.02em' }}>
-            add email
-          </a>
-        </div>
+        <p
+          style={{
+            margin: '0 0 10px',
+            fontSize: '11.5px',
+            letterSpacing: '0.16em',
+            textTransform: 'uppercase',
+            color: '#A8262B',
+          }}
+        >
+          {facultyAdvisor.role}
+        </p>
+        <h2 style={{ margin: '0 0 12px', fontFamily: 'Spectral, Georgia, serif', fontSize: 27, fontWeight: 600 }}>
+          Add name
+        </h2>
+        <p style={{ margin: '0 0 14px', fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>
+          Department · add a line on their role with the chapter.
+        </p>
+        <a href="mailto:" style={{ fontSize: 14, letterSpacing: '0.02em' }}>
+          add email
+        </a>
       </Reveal>
 
       <div
@@ -126,40 +116,31 @@ export default function Team() {
             as="section"
             delay={i * 0.1}
             style={{
-              display: 'grid',
-              gridTemplateColumns: '140px minmax(0, 1fr)',
-              gap: 26,
-              alignItems: 'center',
               padding: 28,
               background: '#F5EBD9',
               border: '1px solid #E4D8C2',
             }}
           >
-            <div style={{ position: 'relative', width: 140, height: 140 }}>
-              <PlaceholderImage shape="circle" caption="Photo" />
-            </div>
-            <div>
-              <p
-                style={{
-                  margin: '0 0 10px',
-                  fontSize: '11.5px',
-                  letterSpacing: '0.16em',
-                  textTransform: 'uppercase',
-                  color: '#A8262B',
-                }}
-              >
-                {officer.role}
-              </p>
-              <h2 style={{ margin: '0 0 12px', fontFamily: 'Spectral, Georgia, serif', fontSize: 27, fontWeight: 600 }}>
-                Add name
-              </h2>
-              <p style={{ margin: '0 0 14px', fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>
-                Programme and department · add a line on their research interests.
-              </p>
-              <a href="mailto:" style={{ fontSize: 14, letterSpacing: '0.02em' }}>
-                add email
-              </a>
-            </div>
+            <p
+              style={{
+                margin: '0 0 10px',
+                fontSize: '11.5px',
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                color: '#A8262B',
+              }}
+            >
+              {officer.role}
+            </p>
+            <h2 style={{ margin: '0 0 12px', fontFamily: 'Spectral, Georgia, serif', fontSize: 27, fontWeight: 600 }}>
+              Add name
+            </h2>
+            <p style={{ margin: '0 0 14px', fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>
+              Programme and department · add a line on their research interests.
+            </p>
+            <a href="mailto:" style={{ fontSize: 14, letterSpacing: '0.02em' }}>
+              add email
+            </a>
           </Reveal>
         ))}
       </div>
