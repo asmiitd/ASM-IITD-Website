@@ -35,17 +35,18 @@ const verticals = [
     executives: ['', '','',''],
   },
   {
-    name: 'Sponsorship & Fundraising',
-    description: 'Funds, accounts, fundraisers and chapter purchases.',
-    coordinators: ['', ''],
-    executives: ['', '','',''],
-  },
-  {
     name: 'Design',
     description: 'Posters, pamphlets, invitations and correct logo usage.',
     coordinators: ['Yashsvi Bhadoriya', ''],
     executives: ['', '','',''],
   },
+  {
+    name: 'Sponsorship & Fundraising',
+    description: 'Funds, accounts, fundraisers and chapter purchases.',
+    coordinators: ['', ''],
+    executives: ['', '','',''],
+  },
+  
 ]
 
 export default function Team() {
