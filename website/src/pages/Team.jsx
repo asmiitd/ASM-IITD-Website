@@ -1,4 +1,5 @@
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
+import Reveal from '../components/Reveal.jsx'
 
 const leadership = [
   { id: 'officer-overall', role: 'Overall Coordinator' },
@@ -35,33 +36,39 @@ const verticals = [
 export default function Team() {
   return (
     <main style={{ maxWidth: 1180, margin: '0 auto', padding: '72px 32px 90px' }}>
-      <p
-        style={{
-          margin: '0 0 14px',
-          fontSize: '11.5px',
-          letterSpacing: '0.18em',
-          textTransform: 'uppercase',
-          color: '#A8262B',
-        }}
-      >
-        2026 term
-      </p>
-      <h1
-        style={{
-          margin: '0 0 18px',
-          fontFamily: 'Spectral, Georgia, serif',
-          fontSize: 'clamp(32px, 4.4vw, 54px)',
-          lineHeight: 1.08,
-          fontWeight: 600,
-          letterSpacing: '-0.015em',
-        }}
-      >
-        Active officers
-      </h1>
-      <p style={{ margin: '0 0 56px', maxWidth: '62ch', fontSize: 17, lineHeight: 1.62, color: '#4A3A33' }}>
-        The chapter is run by one Overall Coordinator and four verticals, each with its own
-        Coordinators and Executives. Officers serve a one‑year term beginning with Semester I.
-      </p>
+      <Reveal>
+        <p
+          style={{
+            margin: '0 0 14px',
+            fontSize: '11.5px',
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: '#A8262B',
+          }}
+        >
+          2026 term
+        </p>
+      </Reveal>
+      <Reveal delay={0.06}>
+        <h1
+          style={{
+            margin: '0 0 18px',
+            fontFamily: 'Spectral, Georgia, serif',
+            fontSize: 'clamp(32px, 4.4vw, 54px)',
+            lineHeight: 1.08,
+            fontWeight: 600,
+            letterSpacing: '-0.015em',
+          }}
+        >
+          Active officers
+        </h1>
+      </Reveal>
+      <Reveal delay={0.12}>
+        <p style={{ margin: '0 0 56px', maxWidth: '62ch', fontSize: 17, lineHeight: 1.62, color: '#4A3A33' }}>
+          The chapter is run by one Overall Coordinator and four verticals, each with its own
+          Coordinators and Executives. Officers serve a one‑year term beginning with Semester I.
+        </p>
+      </Reveal>
 
       <div
         style={{
@@ -71,9 +78,11 @@ export default function Team() {
           marginBottom: 56,
         }}
       >
-        {leadership.map((officer) => (
-          <section
+        {leadership.map((officer, i) => (
+          <Reveal
             key={officer.id}
+            as="section"
+            delay={i * 0.1}
             style={{
               display: 'grid',
               gridTemplateColumns: '140px minmax(0, 1fr)',
@@ -109,13 +118,18 @@ export default function Team() {
                 add email
               </a>
             </div>
-          </section>
+          </Reveal>
         ))}
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: 24 }}>
-        {verticals.map((vertical) => (
-          <section key={vertical.name} style={{ padding: 28, background: '#FAF5EA', border: '1px solid #E4D8C2' }}>
+        {verticals.map((vertical, i) => (
+          <Reveal
+            key={vertical.name}
+            as="section"
+            delay={i * 0.08}
+            style={{ padding: 28, background: '#FAF5EA', border: '1px solid #E4D8C2' }}
+          >
             <h3
               style={{
                 margin: '0 0 6px',
@@ -173,13 +187,15 @@ export default function Team() {
                 <li key={i}>{name}</li>
               ))}
             </ul>
-          </section>
+          </Reveal>
         ))}
       </div>
 
-      <p style={{ margin: '40px 0 0', fontSize: '14.5px', lineHeight: 1.6, color: '#6B584E', maxWidth: '60ch' }}>
-        Faculty advisor and outstanding board members are listed once appointed for the term.
-      </p>
+      <Reveal>
+        <p style={{ margin: '40px 0 0', fontSize: '14.5px', lineHeight: 1.6, color: '#6B584E', maxWidth: '60ch' }}>
+          Faculty advisor and outstanding board members are listed once appointed for the term.
+        </p>
+      </Reveal>
     </main>
   )
 }

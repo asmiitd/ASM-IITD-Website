@@ -1,37 +1,45 @@
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
+import Reveal from '../components/Reveal.jsx'
 
 export default function Talks() {
   return (
     <main style={{ maxWidth: 1180, margin: '0 auto', padding: '72px 32px 90px' }}>
-      <p
-        style={{
-          margin: '0 0 14px',
-          fontSize: '11.5px',
-          letterSpacing: '0.18em',
-          textTransform: 'uppercase',
-          color: '#A8262B',
-        }}
-      >
-        Seminars, webinars and talk series
-      </p>
-      <h1
-        style={{
-          margin: '0 0 18px',
-          fontFamily: 'Spectral, Georgia, serif',
-          fontSize: 'clamp(32px, 4.4vw, 54px)',
-          lineHeight: 1.08,
-          fontWeight: 600,
-          letterSpacing: '-0.015em',
-        }}
-      >
-        Talks
-      </h1>
-      <p style={{ margin: '0 0 56px', maxWidth: '62ch', fontSize: 17, lineHeight: 1.62, color: '#4A3A33' }}>
-        The chapter’s speaker programme, held on campus and online. Recordings and slides are
-        linked where the speaker has agreed to share them.
-      </p>
+      <Reveal>
+        <p
+          style={{
+            margin: '0 0 14px',
+            fontSize: '11.5px',
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: '#A8262B',
+          }}
+        >
+          Seminars, webinars and talk series
+        </p>
+      </Reveal>
+      <Reveal delay={0.06}>
+        <h1
+          style={{
+            margin: '0 0 18px',
+            fontFamily: 'Spectral, Georgia, serif',
+            fontSize: 'clamp(32px, 4.4vw, 54px)',
+            lineHeight: 1.08,
+            fontWeight: 600,
+            letterSpacing: '-0.015em',
+          }}
+        >
+          Talks
+        </h1>
+      </Reveal>
+      <Reveal delay={0.12}>
+        <p style={{ margin: '0 0 56px', maxWidth: '62ch', fontSize: 17, lineHeight: 1.62, color: '#4A3A33' }}>
+          The chapter’s speaker programme, held on campus and online. Recordings and slides are
+          linked where the speaker has agreed to share them.
+        </p>
+      </Reveal>
 
-      <section
+      <Reveal
+        as="section"
         style={{
           display: 'grid',
           gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.05fr)',
@@ -104,15 +112,21 @@ export default function Talks() {
             </span>
           </div>
         </div>
-      </section>
+      </Reveal>
 
-      <h2 style={{ margin: '0 0 8px', fontFamily: 'Spectral, Georgia, serif', fontSize: 26, fontWeight: 600 }}>
-        Upcoming
-      </h2>
-      <p style={{ margin: '0 0 24px', fontSize: 15, color: '#6B584E' }}>
-        Edit this entry, or duplicate it for each scheduled talk.
-      </p>
-      <article
+      <Reveal>
+        <h2 style={{ margin: '0 0 8px', fontFamily: 'Spectral, Georgia, serif', fontSize: 26, fontWeight: 600 }}>
+          Upcoming
+        </h2>
+      </Reveal>
+      <Reveal delay={0.06}>
+        <p style={{ margin: '0 0 24px', fontSize: 15, color: '#6B584E' }}>
+          Edit this entry, or duplicate it for each scheduled talk.
+        </p>
+      </Reveal>
+      <Reveal
+        as="article"
+        delay={0.12}
         style={{
           display: 'grid',
           gridTemplateColumns: '120px minmax(0, 1fr) auto',
@@ -150,19 +164,26 @@ export default function Talks() {
         >
           Offline / Online
         </span>
-      </article>
+      </Reveal>
 
-      <h2 style={{ margin: '0 0 8px', fontFamily: 'Spectral, Georgia, serif', fontSize: 26, fontWeight: 600 }}>
-        Past talks
-      </h2>
-      <p style={{ margin: '0 0 24px', fontSize: 15, color: '#6B584E' }}>
-        Every completed talk is archived here with its speaker and recording.
-      </p>
-      <div style={{ padding: '40px 26px', border: '1px dashed #D3C1A4', borderRadius: 4, textAlign: 'center' }}>
+      <Reveal>
+        <h2 style={{ margin: '0 0 8px', fontFamily: 'Spectral, Georgia, serif', fontSize: 26, fontWeight: 600 }}>
+          Past talks
+        </h2>
+      </Reveal>
+      <Reveal delay={0.06}>
+        <p style={{ margin: '0 0 24px', fontSize: 15, color: '#6B584E' }}>
+          Every completed talk is archived here with its speaker and recording.
+        </p>
+      </Reveal>
+      <Reveal
+        delay={0.12}
+        style={{ padding: '40px 26px', border: '1px dashed #D3C1A4', borderRadius: 4, textAlign: 'center' }}
+      >
         <p style={{ margin: 0, fontSize: 15, color: '#7C6A5C' }}>
           No talks held yet — the first entries appear once the series begins.
         </p>
-      </div>
+      </Reveal>
     </main>
   )
 }

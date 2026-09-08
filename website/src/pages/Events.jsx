@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
+import Reveal from '../components/Reveal.jsx'
 
 const events = [
   {
@@ -34,37 +35,44 @@ const events = [
 export default function Events() {
   return (
     <main style={{ maxWidth: 1180, margin: '0 auto', padding: '72px 32px 90px' }}>
-      <p
-        style={{
-          margin: '0 0 14px',
-          fontSize: '11.5px',
-          letterSpacing: '0.18em',
-          textTransform: 'uppercase',
-          color: '#A8262B',
-        }}
-      >
-        Archive
-      </p>
-      <h1
-        style={{
-          margin: '0 0 18px',
-          fontFamily: 'Spectral, Georgia, serif',
-          fontSize: 'clamp(32px, 4.4vw, 54px)',
-          lineHeight: 1.08,
-          fontWeight: 600,
-          letterSpacing: '-0.015em',
-        }}
-      >
-        Events
-      </h1>
-      <p style={{ margin: '0 0 56px', maxWidth: '62ch', fontSize: 17, lineHeight: 1.62, color: '#4A3A33' }}>
-        Competitions, hands‑on workshops, outreach activities and career fairs run by the chapter,
-        newest first. Seminars and talks live under <Link to="/talks">Talks</Link>.
-      </p>
+      <Reveal>
+        <p
+          style={{
+            margin: '0 0 14px',
+            fontSize: '11.5px',
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: '#A8262B',
+          }}
+        >
+          Archive
+        </p>
+      </Reveal>
+      <Reveal delay={0.06}>
+        <h1
+          style={{
+            margin: '0 0 18px',
+            fontFamily: 'Spectral, Georgia, serif',
+            fontSize: 'clamp(32px, 4.4vw, 54px)',
+            lineHeight: 1.08,
+            fontWeight: 600,
+            letterSpacing: '-0.015em',
+          }}
+        >
+          Events
+        </h1>
+      </Reveal>
+      <Reveal delay={0.12}>
+        <p style={{ margin: '0 0 56px', maxWidth: '62ch', fontSize: 17, lineHeight: 1.62, color: '#4A3A33' }}>
+          Competitions, hands‑on workshops, outreach activities and career fairs run by the chapter,
+          newest first. Seminars and talks live under <Link to="/talks">Talks</Link>.
+        </p>
+      </Reveal>
 
       {events.map((event, i) => (
-        <article
+        <Reveal
           key={event.id}
+          as="article"
           style={{
             display: 'grid',
             gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.05fr)',
@@ -123,7 +131,7 @@ export default function Events() {
               ))}
             </div>
           </div>
-        </article>
+        </Reveal>
       ))}
     </main>
   )
