@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 20, fontSize: '13.5px' }}>
-          <a href="instagram.com/asm.iitd?" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/asm.iitd" target="_blank" rel="noopener noreferrer">
             Instagram
           </a>
           <a href="https://www.linkedin.com/company/asm-iitd-student-chapter/about/" target="_blank" rel="noopener noreferrer">
