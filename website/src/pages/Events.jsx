@@ -25,7 +25,7 @@ const upcomingEvents = [
       '60 seconds, one idea. Record a pitch on any research, technology, idea or solution around the future of microbial sciences and post it on Instagram to enter. Finalists pitch live and get to interact with ASM CEO and distinguished guests.',
     tags: ['Format: ≤60‑sec video', 'Entries close: 24 September 2026'],
     placeholder: 'Drop the MicroPitch poster',
-    image: 'micropitch.png',
+    image: 'micropitch.jpeg',
     aspectRatio: '4 / 5',
   },
 ]
