@@ -41,6 +41,7 @@ these markers and fill them in:
 Drop the image file straight into the matching folder in this repo, using
 the exact filename the page already expects:
 
+- `public/events/micropitch.png` — MicroPitch (portrait poster, ~4:5)
 - `public/events/openhouse.png` — Open House 2026
 - `public/events/tos.png` — Tour of Stalls
 - `public/events/wmd.png` — World Microbiome Day Hackathon
