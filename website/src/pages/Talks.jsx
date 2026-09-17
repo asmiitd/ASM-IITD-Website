@@ -67,7 +67,7 @@ export default function Talks() {
       >
         <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3' }}>
           <PosterImage
-            image="microbytes.png"
+            image="Microbytes.png"
             caption="Drop the series poster"
             alt="Microbytes — the Young Microbiologists Talk Series"
           />
