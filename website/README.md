@@ -36,28 +36,29 @@ these markers and fill them in:
 - **Photos** — every dashed placeholder box (`PlaceholderImage`) is a spot
   for a real photo.
 
-## Adding event photos
+## Adding photos
 
-Drop the image file straight into **`public/events/`** in this repo, using
-the exact filename each event already expects (set in the `image` field of
-the `events` array in `src/pages/Events.jsx`):
+Drop the image file straight into the matching folder in this repo, using
+the exact filename the page already expects:
 
 - `public/events/openhouse.png` — Open House 2026
 - `public/events/tos.png` — Tour of Stalls
-- `public/events/Hacteria.png` — World Microbiome Day Hackathon
+- `public/events/wmd.png` — World Microbiome Day Hackathon
+- `public/talks/microbytes.png` — Microbytes / Young Microbiologists Talk Series poster
 
 The easiest way for anyone on the team, no git required: on GitHub, open
-this folder in the browser (`website/public/events/` in the repo), click
-**Add file → Upload files**, drag the image in, and make sure it's named
-exactly as above before committing to `main`. The site rebuilds and
-redeploys automatically within a couple of minutes (GitHub Actions). If a
-file isn't there yet, that event just shows the dashed placeholder instead
-— nothing breaks.
+the folder in the browser (e.g. `website/public/events/` or
+`website/public/talks/` in the repo), click **Add file → Upload files**,
+drag the image in, and make sure it's named exactly as above before
+committing to `main`. The site rebuilds and redeploys automatically within
+a couple of minutes (GitHub Actions). If a file isn't there yet, that spot
+just shows the dashed placeholder instead — nothing breaks.
 
-For a **new** event or a team/officer photo, add the file under
-`public/events/` (or `public/` for other one-off images) with a new
-filename, then reference that filename from the corresponding entry in
-`src/pages/Events.jsx` (or `src/pages/Team.jsx`) — `image: 'your-file.png'`.
+For a **new** event, talk, or team/officer photo, add the file under
+`public/events/`, `public/talks/`, or `public/` for other one-offs, with a
+new filename, then reference that filename from the corresponding entry in
+`src/pages/Events.jsx`, `src/pages/Talks.jsx`, or `src/pages/Team.jsx` —
+`image: 'your-file.png'`.
 
 `public/logo.png` and `public/constitution.pdf` are copied from the design
 bundle in `../project/`.

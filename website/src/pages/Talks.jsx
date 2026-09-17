@@ -1,5 +1,19 @@
+import { useState } from 'react'
 import PlaceholderImage from '../components/PlaceholderImage.jsx'
 import Reveal from '../components/Reveal.jsx'
+
+function PosterImage({ image, caption, alt }) {
+  const [failed, setFailed] = useState(false)
+  if (!image || failed) return <PlaceholderImage caption={caption} />
+  return (
+    <img
+      src={`${import.meta.env.BASE_URL}talks/${image}`}
+      alt={alt}
+      onError={() => setFailed(true)}
+      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+    />
+  )
+}
 
 export default function Talks() {
   return (
@@ -52,7 +66,11 @@ export default function Talks() {
         }}
       >
         <div style={{ position: 'relative', width: '100%', aspectRatio: '4 / 3' }}>
-          <PlaceholderImage caption="Drop the series poster" />
+          <PosterImage
+            image="microbytes.png"
+            caption="Drop the series poster"
+            alt="Microbytes — the Young Microbiologists Talk Series"
+          />
         </div>
         <div>
           <p
