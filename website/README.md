@@ -44,7 +44,8 @@ the exact filename the page already expects:
 - `public/events/openhouse.png` — Open House 2026
 - `public/events/tos.png` — Tour of Stalls
 - `public/events/wmd.png` — World Microbiome Day Hackathon
-- `public/talks/microbytes.png` — Microbytes / Young Microbiologists Talk Series poster
+- `public/talks/Microbytes.png` — Microbytes / Young Microbiologists Talk Series poster
+- `public/talks/fireside-chat.png` — Fireside Chat with ASM Leadership (26 Sep 2026)
 
 The easiest way for anyone on the team, no git required: on GitHub, open
 the folder in the browser (e.g. `website/public/events/` or

@@ -30,6 +30,7 @@ const upcomingTalks = [
     ],
     venue: 'Seminar Hall, IIT Delhi',
     mode: 'Offline',
+    image: 'fireside-chat.png',
   },
 ]
 
@@ -177,15 +178,18 @@ export default function Talks() {
           delay={0.12 + i * 0.08}
           style={{
             display: 'grid',
-            gridTemplateColumns: '120px minmax(0, 1fr) auto',
-            gap: 26,
-            alignItems: 'center',
+            gridTemplateColumns: '140px 90px minmax(0, 1fr)',
+            gap: 24,
+            alignItems: 'start',
             padding: '24px 26px',
             marginBottom: i === upcomingTalks.length - 1 ? 64 : 16,
             background: '#F5EBD9',
             border: '1px solid #E4D8C2',
           }}
         >
+          <div style={{ position: 'relative', width: 140, height: 140, background: '#FAF5EA' }}>
+            <PosterImage image={talk.image} caption="Drop the talk poster" alt={talk.title} />
+          </div>
           <div>
             <p style={{ margin: 0, fontFamily: 'Spectral, Georgia, serif', fontSize: 30, fontWeight: 600, color: '#7A0F14' }}>
               {talk.day}
@@ -195,17 +199,32 @@ export default function Talks() {
             </p>
           </div>
           <div>
-            <p
-              style={{
-                margin: '0 0 6px',
-                fontSize: '11px',
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: '#A8262B',
-              }}
-            >
-              {talk.eyebrow}
-            </p>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 6 }}>
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: '11px',
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: '#A8262B',
+                }}
+              >
+                {talk.eyebrow}
+              </p>
+              <span
+                style={{
+                  padding: '7px 14px',
+                  border: '1px solid #DFCFB4',
+                  borderRadius: '999px',
+                  fontSize: '12.5px',
+                  color: '#6B584E',
+                  whiteSpace: 'nowrap',
+                  flex: '0 0 auto',
+                }}
+              >
+                {talk.mode}
+              </span>
+            </div>
             <h3 style={{ margin: '0 0 10px', fontSize: 19, fontWeight: 600, lineHeight: 1.35 }}>{talk.title}</h3>
             <ul style={{ margin: '0 0 8px', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 3 }}>
               {talk.speakers.map((speaker) => (
@@ -216,18 +235,6 @@ export default function Talks() {
             </ul>
             <p style={{ margin: 0, fontSize: '13.5px', color: '#8C7A6B' }}>{talk.venue}</p>
           </div>
-          <span
-            style={{
-              padding: '7px 14px',
-              border: '1px solid #DFCFB4',
-              borderRadius: '999px',
-              fontSize: '12.5px',
-              color: '#6B584E',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {talk.mode}
-          </span>
         </Reveal>
       ))}
 
