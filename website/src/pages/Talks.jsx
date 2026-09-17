@@ -23,8 +23,12 @@ const upcomingTalks = [
     time: '10:50 AM',
     eyebrow: 'Fireside Chat',
     title: 'Charting the Future of Microbial Sciences: Insights from ASM Leadership',
-    detail:
-      'Aditi Jain (Scientific Partnerships Manager, India, ASM), Stefano Bertuzzi (CEO, American Society for Microbiology) and Glen McGugan (Director, ASM Mechanism Discovery) · Seminar Hall, IIT Delhi.',
+    speakers: [
+      { name: 'Stefano Bertuzzi', role: 'CEO, American Society for Microbiology' },
+      { name: 'Glen McGugan', role: 'Director, ASM Mechanism Discovery' },
+      { name: 'Aditi Jain', role: 'Scientific Partnerships Manager, India, ASM' },
+    ],
+    venue: 'Seminar Hall, IIT Delhi',
     mode: 'Offline',
   },
 ]
@@ -202,8 +206,15 @@ export default function Talks() {
             >
               {talk.eyebrow}
             </p>
-            <h3 style={{ margin: '0 0 8px', fontSize: 19, fontWeight: 600, lineHeight: 1.35 }}>{talk.title}</h3>
-            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>{talk.detail}</p>
+            <h3 style={{ margin: '0 0 10px', fontSize: 19, fontWeight: 600, lineHeight: 1.35 }}>{talk.title}</h3>
+            <ul style={{ margin: '0 0 8px', padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 3 }}>
+              {talk.speakers.map((speaker) => (
+                <li key={speaker.name} style={{ fontSize: 15, lineHeight: 1.5, color: '#4A3A33' }}>
+                  <span style={{ fontWeight: 600 }}>{speaker.name}</span> — {speaker.role}
+                </li>
+              ))}
+            </ul>
+            <p style={{ margin: 0, fontSize: '13.5px', color: '#8C7A6B' }}>{talk.venue}</p>
           </div>
           <span
             style={{
