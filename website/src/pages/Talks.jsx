@@ -86,15 +86,26 @@ export default function Talks() {
           </p>
           <h2
             style={{
-              margin: '0 0 16px',
+              margin: '0 0 6px',
               fontFamily: 'Spectral, Georgia, serif',
-              fontSize: 'clamp(26px, 2.8vw, 38px)',
-              lineHeight: 1.14,
+              fontSize: 'clamp(28px, 3.2vw, 42px)',
+              lineHeight: 1.1,
               fontWeight: 600,
+              letterSpacing: '0.01em',
             }}
           >
-            Young Microbiologists Talk Series
+            Microbytes
           </h2>
+          <p
+            style={{
+              margin: '0 0 18px',
+              fontSize: '15px',
+              letterSpacing: '0.02em',
+              color: '#E9C6A4',
+            }}
+          >
+            The Young Microbiologists Talk Series
+          </p>
           <p style={{ margin: '0 0 22px', fontSize: '16.5px', lineHeight: 1.66, color: '#EBD9C4', textWrap: 'pretty' }}>
             A recurring series putting early career microbiologists — PhD scholars, postdocs and
             young faculty — in front of students to talk about their research and the paths that
