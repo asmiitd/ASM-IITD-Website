@@ -30,7 +30,7 @@ const upcomingTalks = [
     ],
     venue: 'Seminar Hall, IIT Delhi',
     mode: 'Offline',
-    image: 'fireside-chat.png',
+    image: 'fireside-chat.jpeg',
   },
 ]
 
