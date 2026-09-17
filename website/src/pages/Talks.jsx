@@ -109,8 +109,7 @@ export default function Talks() {
           <p style={{ margin: '0 0 22px', fontSize: '16.5px', lineHeight: 1.66, color: '#EBD9C4', textWrap: 'pretty' }}>
             A recurring series putting early career microbiologists — PhD scholars, postdocs and
             young faculty — in front of students to talk about their research and the paths that
-            took them there. Replace this paragraph with the format, frequency and how to nominate
-            a speaker.
+            took them there. 
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             <span
