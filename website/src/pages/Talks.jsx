@@ -15,6 +15,20 @@ function PosterImage({ image, caption, alt }) {
   )
 }
 
+const upcomingTalks = [
+  {
+    id: 'fireside-chat-asm-leadership',
+    day: '26',
+    month: 'Sep',
+    time: '10:50 AM',
+    eyebrow: 'Fireside Chat',
+    title: 'Charting the Future of Microbial Sciences: Insights from ASM Leadership',
+    detail:
+      'Aditi Jain (Scientific Partnerships Manager, India, ASM), Stefano Bertuzzi (CEO, American Society for Microbiology) and Glen McGugan (Director, ASM Mechanism Discovery) · Seminar Hall, IIT Delhi.',
+    mode: 'Offline',
+  },
+]
+
 export default function Talks() {
   return (
     <main style={{ maxWidth: 1180, margin: '0 auto', padding: '72px 32px 90px' }}>
@@ -149,50 +163,62 @@ export default function Talks() {
       </Reveal>
       <Reveal delay={0.06}>
         <p style={{ margin: '0 0 24px', fontSize: 15, color: '#6B584E' }}>
-          Edit this entry, or duplicate it for each scheduled talk.
+          The next scheduled talk in the series.
         </p>
       </Reveal>
-      <Reveal
-        as="article"
-        delay={0.12}
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '120px minmax(0, 1fr) auto',
-          gap: 26,
-          alignItems: 'center',
-          padding: '24px 26px',
-          marginBottom: 64,
-          background: '#F5EBD9',
-          border: '1px solid #E4D8C2',
-        }}
-      >
-        <div>
-          <p style={{ margin: 0, fontFamily: 'Spectral, Georgia, serif', fontSize: 30, fontWeight: 600, color: '#7A0F14' }}>
-            DD
-          </p>
-          <p style={{ margin: '2px 0 0', fontSize: '12.5px', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#8C7A6B' }}>
-            Month · time
-          </p>
-        </div>
-        <div>
-          <h3 style={{ margin: '0 0 8px', fontSize: 19, fontWeight: 600, lineHeight: 1.35 }}>Talk title</h3>
-          <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>
-            Speaker name, affiliation · one line on the topic. Add the venue or the meeting link.
-          </p>
-        </div>
-        <span
+      {upcomingTalks.map((talk, i) => (
+        <Reveal
+          key={talk.id}
+          as="article"
+          delay={0.12 + i * 0.08}
           style={{
-            padding: '7px 14px',
-            border: '1px solid #DFCFB4',
-            borderRadius: '999px',
-            fontSize: '12.5px',
-            color: '#6B584E',
-            whiteSpace: 'nowrap',
+            display: 'grid',
+            gridTemplateColumns: '120px minmax(0, 1fr) auto',
+            gap: 26,
+            alignItems: 'center',
+            padding: '24px 26px',
+            marginBottom: i === upcomingTalks.length - 1 ? 64 : 16,
+            background: '#F5EBD9',
+            border: '1px solid #E4D8C2',
           }}
         >
-          Offline / Online
-        </span>
-      </Reveal>
+          <div>
+            <p style={{ margin: 0, fontFamily: 'Spectral, Georgia, serif', fontSize: 30, fontWeight: 600, color: '#7A0F14' }}>
+              {talk.day}
+            </p>
+            <p style={{ margin: '2px 0 0', fontSize: '12.5px', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#8C7A6B' }}>
+              {talk.month} · {talk.time}
+            </p>
+          </div>
+          <div>
+            <p
+              style={{
+                margin: '0 0 6px',
+                fontSize: '11px',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: '#A8262B',
+              }}
+            >
+              {talk.eyebrow}
+            </p>
+            <h3 style={{ margin: '0 0 8px', fontSize: 19, fontWeight: 600, lineHeight: 1.35 }}>{talk.title}</h3>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.6, color: '#4A3A33' }}>{talk.detail}</p>
+          </div>
+          <span
+            style={{
+              padding: '7px 14px',
+              border: '1px solid #DFCFB4',
+              borderRadius: '999px',
+              fontSize: '12.5px',
+              color: '#6B584E',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {talk.mode}
+          </span>
+        </Reveal>
+      ))}
 
       <Reveal>
         <h2 style={{ margin: '0 0 8px', fontFamily: 'Spectral, Georgia, serif', fontSize: 26, fontWeight: 600 }}>
