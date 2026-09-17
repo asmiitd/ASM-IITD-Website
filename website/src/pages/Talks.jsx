@@ -31,6 +31,7 @@ const upcomingTalks = [
     venue: 'Seminar Hall, IIT Delhi',
     mode: 'Offline',
     image: 'fireside-chat.jpeg',
+    registerUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSf4711VfC9TNBBNlZFPTxiScH518pH3iq1s6q9G1jlafKbJTA/viewform',
   },
 ]
 
@@ -233,7 +234,19 @@ export default function Talks() {
                 </li>
               ))}
             </ul>
-            <p style={{ margin: 0, fontSize: '13.5px', color: '#8C7A6B' }}>{talk.venue}</p>
+            <p style={{ margin: talk.registerUrl ? '0 0 10px' : 0, fontSize: '13.5px', color: '#8C7A6B' }}>
+              {talk.venue}
+            </p>
+            {talk.registerUrl && (
+              <a
+                href={talk.registerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontSize: 14, letterSpacing: '0.02em', fontWeight: 600 }}
+              >
+                Register for the talk
+              </a>
+            )}
           </div>
         </Reveal>
       ))}
